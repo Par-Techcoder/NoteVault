@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NoteVault</title>
+  <style>
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: #121212;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 3em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; margin-bottom: 20px; }
+    .btn { background: #e63946; color: white; padding: 12px 24px; border:none; border-radius:5px; cursor:pointer; }
+    .btn:hover { background: #d62839; }
+
+    .sign-btn { background: #e63946; color: white; padding: 12px 24px; border:none; border-radius:5px; cursor:pointer;  margin-left:80%; }
+    .sign-btn:hover { background: #d62839; }
+
+    .btn, .sign-btn { text-decoration: none; }
+
+    .features, .testimonials {
+      display: grid;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .features { grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); }
+    .feature {
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .testimonials { grid-template-columns: 1fr; }
+    @media(min-width: 600px) {
+      .testimonials { grid-template-columns: repeat(2,1fr); }
+    }
+    .testi {
+      background: #fff;
+      border-left: 4px solid #e63946;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .testi p { margin-bottom: 10px; }
+    .testi .name { font-weight: bold; }
+
+    footer {
+      background: #121212;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header>
+    <a href="/login" class="sign-btn">Sign in</a>
+    <h2>A Simple way to <br> create Notes</h2>
+    <h1>NoteVault</h1>
+    <p>Capture, Create, Connect — Your personal note‑making journey starts here.</p>    
+    <a href="/register" class="btn">Get Started</a>
+  </header>
+
+  <!-- Features -->
+  <section class="features">
+    <h1>Why NoteVault ?</h1>
+    <div class="feature">
+      <h2>Easy Note-Taking</h2>
+      <p>Create & edit notes in a seamless, distraction-free interface.</p>
+    </div>
+    <div class="feature">
+      <h2>Custom Themes</h2>
+      <p>Personalize your experience with light, dark, and custom themes.</p>
+    </div>
+    <div class="feature">
+      <h2>Secure & Private</h2>
+      <p>Your notes are encrypted and accessible only by you.</p>
+    </div>
+    <div class="feature">
+      <h2>Cross-Platform</h2>
+      <p>Access your notes from any device, anywhere, anytime.</p>
+    </div>
+    <div class="feature">
+      <h2>Collaborative Features</h2>
+      <p>Share notes with friends and collaborate in real-time.</p>
+    </div>
+    <div class="feature">
+      <h2>Search & Organize</h2>
+      <p>Find your notes quickly with powerful search and organization tools.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 NoteVault. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,12 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from constants import Gender
+from notes.constants.default_value import Gender
+
 
 class User(AbstractUser):
     username = None  # Completely remove username field
     email = models.EmailField(unique=True)  # This will now act as the username
+    password = models.CharField(max_length=128)  # Password field is still required
 
-    name = models.CharField(max_length=30, blank=True)
+    name = models.CharField(max_length=120)
     gender = models.IntegerField(
         choices=[(gender.value, gender.name) for gender in Gender],
         null=False, blank=False
