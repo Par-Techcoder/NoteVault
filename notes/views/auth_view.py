@@ -27,25 +27,28 @@ class RegisterView(View):
         user = User(email=email, password=hashed_password)
         user.save()
 
-        # No login() here because we're not using Django's auth system
         return redirect('login')  # Redirect to login after successful registration
 
-        
 
 class LoginView(View):
     def get(self, request):
         return render(request, 'auth/login.html')
-    
+
     def post(self, request):
         email = request.POST.get('email')
         password = request.POST.get('password')
 
-        user = authenticate(request, username=email, password=password)
-        if user is not None:
-            login(request, user)
-            return redirect('home')            
+        user = User.objects(email=email).first()
+
+        if user and bcrypt.verify(password, user.password):
+            # Simulate login by storing user ID in session
+            request.session['user_id'] = str(user.id)
+            return redirect('note_list')  # Replace with your notes page
         else:
-            return render(redirect, 'register')
+            return render(request, 'auth/login.html', {
+                'error': 'Invalid credentials. Please try again or register.'
+            })
+        
 
 
 class LogoutView(View):

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white min-h-screen font-sans">
+
+  <!-- Header -->
+  <div class="p-6">
+    <h1 class="text-3xl font-semibold">All notes</h1>
+    <p class="text-gray-400 mt-1">6 notes</p>
+  </div>
+
+  <!-- Actions -->
+  <div class="flex justify-between items-center px-6 mb-4">
+    <div class="flex items-center space-x-2 text-gray-300">
+      <span class="text-sm">Date modified</span>
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.167l3.71-3.937a.75.75 0 011.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+    </div>
+    <div class="flex space-x-4 text-white">
+      <button class="text-sm">PDF +</button>
+      <button>🔍</button>
+      <button>⋮</button>
+    </div>
+  </div>
+
+  <!-- Notes Grid -->
+  <div class="grid grid-cols-4 gap-4 px-6">
+    <div class="bg-gray-800 p-4 rounded-lg">
+      <h2 class="font-semibold">JavaScript</h2>
+      <p class="text-xs text-gray-400">Jul 11</p>
+      <p class="text-sm mt-2">Variables<br>Data type<br>Control...</p>
+    </div>
+    <div class="bg-gray-800 p-4 rounded-lg">
+      <h2 class="font-semibold">Something</h2>
+      <p class="text-xs text-gray-400">Jul 8</p>
+      <p class="text-sm mt-2">I'm Not A Regressor<br>I'm Going to Destroy...</p>
+    </div>
+    <div class="bg-gray-800 p-4 rounded-lg">
+      <h2 class="font-semibold">Handwritten note 02/22</h2>
+      <p class="text-xs text-gray-400">Feb 22</p>
+      <div class="w-full h-28 bg-gray-600 rounded mt-2"></div>
+    </div>
+    <div class="bg-gray-800 p-4 rounded-lg">
+      <h2 class="font-semibold">★Memorize</h2>
+      <p class="text-xs text-gray-400">-</p>
+      <p class="text-sm mt-2">• Absolute sword sense<br>• The...</p>
+    </div>
+    <div class="bg-gray-800 p-4 rounded-lg">
+      <h2 class="font-semibold">Text Info</h2>
+      <p class="text-xs text-gray-400">-</p>
+      <p class="text-sm mt-2">2023~ROLL:1217111<br>REG:1211127...</p>
+    </div>
+    <div class="bg-gray-800 p-4 rounded-lg relative">
+      <img src="https://via.placeholder.com/150" alt="IGNOU" class="w-full h-32 object-cover rounded mb-2">
+      <h2 class="font-semibold">IGNOU Form</h2>
+    </div>
+  </div>
+
+  <!-- Floating Action Button -->
+  <button class="fixed bottom-6 right-6 bg-orange-500 p-4 rounded-full shadow-lg hover:bg-orange-600 transition">
+    📝
+  </button>
+
+</body>
+</html>

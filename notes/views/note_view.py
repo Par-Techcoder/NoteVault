@@ -10,8 +10,8 @@ def create_note(request):
         Note(title=title, content=content).save()
         return redirect('note_list')
 
-    return render(request, 'notes/create.html')
+    return render(request, 'enduser/notes/create.html')
 
 def note_list(request):
     notes = Note.objects.all()
-    return render(request, 'notes/list.html', {'notes': notes})
+    return render(request, 'enduser/notes/list.html', {'notes': notes})
