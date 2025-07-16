@@ -11,4 +11,9 @@ path('register/', views.RegisterView.as_view(), name='register'),
 
 # Home URL
 path('', views.HomeView.as_view(), name='home'),
+
+# Note URLs
+path('create/', views.create_note, name='create_note'),
+path('notes/', views.note_list, name='note_list'),
+
 ]

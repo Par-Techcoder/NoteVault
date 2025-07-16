@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 from env_config import env
-
+from mongoengine import connect
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -72,24 +72,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'notes_project.wsgi.application'
 
-AUTH_USER_MODEL = 'notes.User'
-
-
 
 # Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': env('DATABASE_NAME'),
-        'ENFORCE_SCHEMA': False,
-        'CLIENT': {
-            'host': 'mongodb://localhost:27017',
-        }
-    }
+MONGODB_SETTINGS = {
+    'db': env('DATABASE_NAME'),
+    'host': 'localhost',
+    'port': 27017,
 }
 
+# Connect to MongoDB
+connect(**MONGODB_SETTINGS)
 
 
 # Password validation
