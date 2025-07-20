@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from passlib.hash import bcrypt
 
 
-class RegisterView(View):
+class SignupView(View):
     def get(self, request):
         return render(request, 'auth/register.html')
 
